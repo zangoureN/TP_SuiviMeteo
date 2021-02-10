@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Roboto:wght@500&family=Courgette&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <meta charset="UTF-8" />
+    <title>Examen TP</title>
+  </head>
+  <header>
+    <div class="overlay">
+      <h1>Suivi Meteo</h1>
+    </div>
+  </header>
+  <body>
+    <!-- 
+      <h1 id="titre">TP Météo HTML</h1>
+-->
+
+    <div class="box">
+      <label class="labelChoixville" for="choix-ville"
+        >Choisir une ville:</label
+      >
+      <select id="listeVilles" onchange="showCity()">
+        <!-- hidden -->
+        <option value="" selected disabled hidden>-- Choisir une ville</option>
+        <option id="Paris" class="ville">Paris</option>
+        <option id="Lyon" class="ville">Lyon</option>
+        <option id="Marseille" class="ville">Marseille</option>
+      </select>
+    </div>
+
+    <div class="flex1">
+      <div id="Paris" class="city">
+        <table class="tableauMeteo">
+          <tr>
+            <th class="nomVille">Paris</th>
+
+            <th>
+              <img class="imageMeteo" src="Pluvieux.png" alt="Pluvieux" />
+            </th>
+          </tr>
+
+          <tr>
+            <td class="etatMeteo" colspan="2">-3, Pluvieux</td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="Marseille" class="city">
+        <table class="tableauMeteo">
+          <tr>
+            <th class="nomVille">Marseille</th>
+
+            <th>
+              <img class="imageMeteo" src="soleil.png" alt="Ensoleillé" />
+            </th>
+          </tr>
+
+          <tr>
+            <td class="etatMeteo" colspan="2">22, Ensoleillé</td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="Lyon" class="city">
+        <table class="tableauMeteo">
+          <tr>
+            <th class="nomVille">Lyon</th>
+
+            <th>
+              <img class="imageMeteo" src="Nuageux.png" alt="Nuageux" />
+            </th>
+          </tr>
+
+          <tr>
+            <td class="etatMeteo" colspan="2">10, Nuageux</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p class="nomBinomes">Nabil MOKHTARI & Adlane AIT AMRANE</p>
+      <p class="sourceImages">
+        Pour voir la source des images:<a
+          href="https://thenounproject.com/search/collection/?q=weather"
+          target="_blank"
+          >Lien vers la source des icons météo</a
+        >
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
